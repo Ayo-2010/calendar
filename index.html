@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calendar</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<main class="app">
+  <header>
+    <div>
+      <p class="eyebrow">Planner</p>
+      <h1 id="monthLabel">October 2026</h1>
+      <p class="month-meta" id="monthMeta">0 events this month</p>
+    </div>
+    <div class="nav">
+      <button id="prevBtn" type="button" aria-label="Previous month">‹</button>
+      <button id="todayBtn" type="button">Today</button>
+      <button id="nextBtn" type="button" aria-label="Next month">›</button>
+    </div>
+  </header>
+
+  <div class="weekdays">
+    <span>Mon</span>
+    <span>Tue</span>
+    <span>Wed</span>
+    <span>Thu</span>
+    <span>Fri</span>
+    <span>Sat</span>
+    <span>Sun</span>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <section class="day-panel">
+    <div class="panel-head">
+      <div>
+        <p class="eyebrow">Selected day</p>
+        <h2 id="selectedLabel">—</h2>
+      </div>
+      <span class="count" id="eventCount">0 events</span>
+    </div>
+
+    <form id="eventForm">
+      <input id="eventInput" placeholder="Add an event" maxlength="80" autocomplete="off">
+      <button type="submit">Add</button>
+    </form>
+
+    <ul class="events" id="events"></ul>
+    <p class="empty" id="empty" hidden>Nothing planned. Add an event above.</p>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
